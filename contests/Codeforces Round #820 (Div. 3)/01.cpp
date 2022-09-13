@@ -1,5 +1,5 @@
 /* Editor: Omkar Ugale
-DATE - 30-Aug-2022 TIME - 11:58:05*/
+DATE - 12-Sep-2022 TIME - 20:02:06*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -18,19 +18,21 @@ void PrintArr(vector<int> &arr)
 int32_t main()
 {
     fastio;
-    // int t;
-    // cin >> t;
-    // while (t--)
-    // {
-        int x, y, z, t1, t2, t3;
-        cin >> x >> y >> z >> t1 >> t2 >> t3;
-        int stairs = abs(y - x) * t1;
-        int elev = 3 * t3 + (abs(y - x) + abs(z-x)) * t2;
-        // cout << elev << " " << stairs << endl;
-        if (elev > stairs)
-            cout << "NO" << endl;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int a, b, c;
+        cin >> a >> b >> c;
+        int i = abs(a - 1);
+        int j = abs(b - c) + abs(c - 1);
+        // cout << i << j << endl;
+        if (i < j)
+            cout << 1 << endl;
+        else if (j < i)
+            cout << 2 << endl;
         else
-            cout << "YES" << endl;
-    // }
+            cout << 3 << endl;
+    }
     return 0;
 }
