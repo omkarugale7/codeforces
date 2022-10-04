@@ -1,5 +1,5 @@
 /* Editor: Omkar Ugale
-DATE - 04-Oct-2022 TIME - 14:20:01*/
+DATE - 23-Sep-2022 TIME - 06:42:04*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -22,19 +22,12 @@ int32_t main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        if (n % 2 == 0)
-            cout << n / 2 << " " << n / 2 << endl;
+        string s;
+        cin >> s;
+        if (s.length() > 10)
+            cout << s[0] << s.length() - 2 << s[s.length() - 1] << endl;
         else
-        {
-            int a = n / 2, b = n / 2 + 1;
-            while(b%a)
-            {
-                b++,a--;
-            }
-            cout<<a<<" "<<b<<endl;
-        }
+        cout<<s<<endl;
     }
     return 0;
 }

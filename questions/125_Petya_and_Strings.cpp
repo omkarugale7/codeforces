@@ -1,5 +1,5 @@
 /* Editor: Omkar Ugale
-DATE - 04-Oct-2022 TIME - 14:20:01*/
+DATE - 03-Oct-2022 TIME - 21:39:38*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -18,23 +18,16 @@ void PrintArr(vector<int> &arr)
 int32_t main()
 {
     fastio;
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        if (n % 2 == 0)
-            cout << n / 2 << " " << n / 2 << endl;
-        else
-        {
-            int a = n / 2, b = n / 2 + 1;
-            while(b%a)
-            {
-                b++,a--;
-            }
-            cout<<a<<" "<<b<<endl;
-        }
-    }
+    string a, b;
+    cin >> a >> b;
+    transform(a.begin(), a.end(), a.begin(), ::toupper);
+    transform(b.begin(), b.end(), b.begin(), ::toupper);
+    cout<<a<<" "<<b<<endl;
+    if (a < b)
+        cout << "-1" << endl;
+    else if (a > b)
+        cout << 1 << endl;
+    else
+        cout << 0 << endl;
     return 0;
 }

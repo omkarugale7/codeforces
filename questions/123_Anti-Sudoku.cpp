@@ -1,5 +1,5 @@
 /* Editor: Omkar Ugale
-DATE - 21-Aug-2022 TIME - 16:13:31*/
+DATE - 01-Oct-2022 TIME - 09:21:04*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -22,35 +22,25 @@ int32_t main()
     cin >> t;
     while (t--)
     {
-        int n, t;
-        cin >> n >> t;
-        vector<int> arr(n, 0);
+        int n = 9;
+        vector<string> arr(n );
         // map<int, int> m;
         // set<int> s;
-        int odd = 0, even = 0;
+        for (int i = 0; i < n; i++)
+            cin >> arr[i];
         for (int i = 0; i < n; i++)
         {
-            cin >> arr[i];
-            if (arr[i] % 2)
-                odd++;
-            else
-                even++;
+            for (int j = 0; j < n; j++)
+            {
+                if (arr[i][j] == '1')
+                    arr[i][j] = '2';
+            }
         }
-        if (odd == 0)
-        {
-            cout << "No" << endl;
-            continue;
-        }
+        for (int i = 0; i < n; i++)
+            cout << arr[i] << endl;
 
-        if (odd % 2 == 0)
-            odd--;
-        if (t % 2 == 0 && even == 0)
-            cout << "No" << endl;
-        else if (odd + even >= t)
-            cout << "Yes" << endl;
-        else
-            cout << "No" << endl;
         // sort(arr.begin(), arr.end());
+
         // PrintArr(arr);
     }
     return 0;

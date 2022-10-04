@@ -41,8 +41,8 @@ int32_t main()
         int i = 0, cnt = 0;
         while (i < odd.size())
         {
-            if(cnt+1==n)
-            break;
+            if (cnt + 1 == n)
+                break;
             if (odd.size() - i == 1)
                 break;
             cout << odd[i++] << " " << odd[i++] << endl;
@@ -51,8 +51,8 @@ int32_t main()
         i = 0;
         while (i < even.size())
         {
-            if(cnt+1==n)
-            break;
+            if (cnt + 1 == n)
+                break;
             if (even.size() - i == 1)
                 break;
             cout << even[i++] << " " << even[i++] << endl;
